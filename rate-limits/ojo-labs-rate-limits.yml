@@ -1,0 +1,19 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.movoto.com/robots.txt
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  OJO Labs publishes no API and therefore no rate-limit documentation, no RateLimit-*
+  or X-RateLimit-* response headers, and no documented 429 behaviour. The only published
+  throughput signal on any company host is a crawler directive, not an API limit:
+  www.movoto.com/robots.txt sets "Crawl-delay: 1" and explicitly disallows /api/ and
+  /webservices/ for all user agents (with a single narrow "Allow: /api/dosearch/"
+  exception). That internal XHR surface is not a developer product and was not probed.
+crawler_policy:
+  source: https://www.movoto.com/robots.txt
+  status: 200
+  crawl_delay_seconds: 1
+  disallowed_api_paths: [/api/, /webservices/]
+  allowed_api_paths: [/api/dosearch/]

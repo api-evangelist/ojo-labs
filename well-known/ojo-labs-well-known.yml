@@ -1,0 +1,89 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of every OJO Labs / Movoto host named in apis.yml
+note: >-
+  No /.well-known/ document is served on any OJO Labs host. ojo.com is a client-side
+  single-page app whose origin answers HTTP 200 with the SAME 5,317-byte HTML shell for
+  every unknown path, including every /.well-known/* path — these are soft 404s, not
+  documents, and none was saved. www.movoto.com returns genuine 404s (zero-length body)
+  for security.txt, agent-card.json, agent.json and ai-plugin.json, and serves its
+  branded HTML 404 page for the OIDC/OAuth/api-catalog paths. NO WellKnown and NO
+  SecurityTxt pointer is emitted in apis.yml, because nothing was actually served.
+hit_count: 0
+hosts:
+- host: https://ojo.com
+  soft_404_control:
+    probe: https://ojo.com/.well-known/api-evangelist-soft-404-control
+    status: 200
+    content_type: text/html
+    bytes: 5317
+    verdict: catch-all SPA shell — every path returns the identical body
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft 404 — SPA HTML shell, not a document
+- host: https://www.ojo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft 404 — same SPA shell as the apex host
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft 404 — same SPA shell as the apex host
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft 404 — same SPA shell as the apex host
+- host: https://www.movoto.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: branded Movoto HTML 404 page
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: branded Movoto HTML 404 page
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: branded Movoto HTML 404 page
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

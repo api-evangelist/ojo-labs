@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io, api.github.com/orgs/ojolabs,
+  and the OJO Labs / Movoto public web surface
+package_count: 0
+packages: []
+note: >-
+  OJO Labs publishes no first-party client library on any public registry. The company's
+  verified GitHub organization (github.com/ojolabs — "Ojo Labs, Inc.", Austin TX,
+  dev@ojolabs.com) holds exactly ONE public repository, and it is a 2019 fork of
+  aio-libs/aiohttp, not an SDK. Namesake packages exist and are NOT OJO Labs: npm "ojo"
+  (v0.0.2, github.com/jasonChen1982/ojo) and PyPI "ojo" (placeholder metadata,
+  "My short description for my project") are unrelated third-party projects and were
+  deliberately not recorded. No SDKs pointer is emitted in apis.yml because there is no
+  official SDK to count.
+registries_probed:
+- registry: npm
+  queries: [ojo, movoto, ojo-labs, "@ojo/sdk"]
+  first_party_hits: 0
+- registry: pypi
+  queries: [ojo, movoto]
+  first_party_hits: 0
+- registry: github
+  queries: [ojolabs, ojo-labs, movoto]
+  first_party_hits: 0
+  note: org ojolabs exists (1 public repo — an aiohttp fork); org "movoto" does not exist

@@ -1,0 +1,47 @@
+# OJO Labs
+
+> OJO Labs is an Austin, Texas real estate technology company (founded 2015) that operates
+> the Movoto consumer real estate search portal and the OJO homeownership platform for
+> buyers, sellers and homeowners, monetized through an agent referral network. OJO acquired
+> Movoto in 2020 and The LEAD Syndicate in 2024, and was acquired by mortgage lender Lower
+> in May 2025. OJO Labs publishes NO public API, developer portal, SDK, or machine-readable
+> contract of any kind.
+
+## APIs
+
+- No public API. As of 2026-08-26 OJO Labs publishes no developer program, no API
+  reference, no OpenAPI/AsyncAPI/GraphQL contract, no MCP server and no A2A agent card.
+  Lead delivery into agent CRMs (Follow Up Boss, BoomTown, Sierra Interactive, Chime and
+  others) is handled through email parsing and third-party middleware, not a documented
+  partner API. Movoto's internal /api/ and /webservices/ paths are application XHR
+  endpoints that robots.txt disallows for all crawlers; they are not a published product.
+
+## Company
+
+- [OJO](https://ojo.com/): Homebuying, homeownership and home-selling platform.
+- [Movoto](https://www.movoto.com/): Consumer real estate search portal operated by OJO Labs.
+- [Movoto Help Center](https://help.movoto.com/): Consumer and agent support.
+- [Movoto Blog](https://www.movoto.com/blog/): Real estate market and how-to content.
+- [Careers](https://ojo.com/careers/): Open roles.
+- [Press resources](https://ojo.com/press-resources/): Announcements and reports.
+- [State broker licenses](https://ojo.com/broker-licenses): Real estate brokerage licensing disclosures.
+
+## Legal
+
+- [Terms and Conditions](https://ojo.com/terms-and-conditions/)
+- [Privacy Policy](https://ojo.com/privacy/)
+
+## Code
+
+- [github.com/ojolabs](https://github.com/ojolabs): Verified OJO Labs, Inc. organization.
+  One public repository, a 2019 fork of aiohttp. No first-party SDK on npm, PyPI,
+  RubyGems, crates.io or any other public registry.
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/ojo-labs/refs/heads/main/apis.yml)
+- [Packages (empty, probed)](packages/ojo-labs-packages.yml)
+- [Plans (none published)](plans/ojo-labs-plans-pricing.yml)
+- [Rate limits (none published)](rate-limits/ojo-labs-rate-limits.yml)
+- [Well-known probe (no documents served)](well-known/ojo-labs-well-known.yml)
+- [Domain security probe](security/ojo-labs-domain-security.yml)

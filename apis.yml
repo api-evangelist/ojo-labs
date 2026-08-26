@@ -1,17 +1,37 @@
 aid: ojo-labs
 name: OJO Labs
-description: 'OJO Labs is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  OJO Labs is an Austin, Texas real estate technology company founded in 2015 that
+  operates Movoto, one of the largest consumer real estate search portals in the United
+  States, alongside OJO's homeownership platform for buyers, sellers and existing
+  homeowners. The company pairs AI-driven property search and home-value tracking with
+  human real estate advisors, and monetizes primarily through an agent referral network
+  that routes qualified consumers to licensed brokerages. OJO acquired Movoto in 2020
+  and The LEAD Syndicate in 2024, launching Lever by Movoto as its industry-facing
+  agent platform, and was itself acquired by Columbus, Ohio mortgage lender Lower in
+  May 2025. OJO Labs is an end-user product company: it publishes no public developer
+  program, API reference, SDK or machine-readable API contract, and its lead delivery
+  to agent CRMs is handled through email parsing and third-party middleware rather
+  than a documented partner API.
+image: https://ojo.com/static/media/ojo-logo.c15e6d9a.svg
 url: https://raw.githubusercontent.com/api-evangelist/ojo-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
+x-parent-company: Lower (acquired OJO Labs, May 2025)
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Real Estate
+- PropTech
+- Home Search
+- Mortgage
+- Marketplace
+- Lead Generation
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,50 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ojo-labs-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/ojo-labs-stock
+  url: https://ojo.com/
+- type: TermsOfService
+  url: https://ojo.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://ojo.com/privacy/
+- type: GitHubOrganization
+  url: https://github.com/ojolabs
+- type: Support
+  url: https://help.movoto.com/
+- type: Blog
+  url: https://www.movoto.com/blog/
+- type: Packages
+  url: packages/ojo-labs-packages.yml
+- type: Plans
+  url: plans/ojo-labs-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/ojo-labs-rate-limits.yml
+- type: LLMsTxt
+  url: llms/ojo-labs-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    OJO Labs ships only end-user products — ojo.com's own sitemap lists 31 URLs and not one
+    is a developer, API or docs page, developer.ojo.com/docs.ojo.com/api.ojo.com do not
+    resolve, and the only programmatic surface on any company host is Movoto's internal XHR
+    /api/ path, which www.movoto.com/robots.txt disallows for every user agent.
+  evidence:
+  - url: https://ojo.com/sitemap.xml
+    status: 200
+  - url: https://ojo.com/openapi.json
+    status: 200
+  - url: https://www.movoto.com/robots.txt
+    status: 200
+  - url: https://www.movoto.com/.well-known/security.txt
+    status: 404
+  - url: https://www.movoto.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-26'
