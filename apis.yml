@@ -24,6 +24,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://ojo.com/static/media/ojo-logo.c15e6d9a.svg
 url: https://raw.githubusercontent.com/api-evangelist/ojo-labs/refs/heads/main/apis.yml
 x-type: company
