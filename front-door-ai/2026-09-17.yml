@@ -1,0 +1,27 @@
+# Front Door AI Index — ojo-labs — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: ojo-labs
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: ojo.com
+  final_host: www.movoto.com
+  ownership: own
+  owner: ojo-labs
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 1
+  host_score: 1
+  density: 1.04
+  words: 961
+  tiers:
+    agentic: 0
+    core: 1
+    model: 0
+  ambiguous: 9
+  top_terms:
+    agent: 7
+    smart: 2
+    AI: 1
